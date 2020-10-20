@@ -1,16 +1,64 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [{
+			"path": "pages/tabbar/home/home",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText":"喵酷科技",
+				"navigationStyle":"custom"
 			}
+		},
+		{
+			"path": "pages/tabbar/business/business",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/demo/demo",
+			"style": {}
+		},
+		{
+			"path": "pages/tabbar/service/service",
+			"style": {}
 		}
-	],
+	    ,{
+            "path" : "pages/demo/detail/detail",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"selectedColor":"#3eb2bf",
+		"color":"#333",
+		"list": [{
+				"iconPath": "static/imgs/tabbar/tab_home_02.png",
+				"selectedIconPath": "static/imgs/tabbar/tab_home_01.png",
+				"text": "首页",
+				"pagePath": "pages/tabbar/home/home"
+			},
+			{
+				"iconPath": "static/imgs/tabbar/tab_bussiness_02.png",
+				"selectedIconPath": "static/imgs/tabbar/tab_bussiness_01.png",
+				"text": "业务",
+				"pagePath": "pages/tabbar/business/business"
+			},
+			{
+				"iconPath": "static/imgs/tabbar/tab_demo_02.png",
+				"selectedIconPath": "static/imgs/tabbar/tab_demo_01.png",
+				"text": "案例",
+				"pagePath": "pages/tabbar/demo/demo"
+			},
+			{
+				"iconPath": "static/imgs/tabbar/tab_service_02.png",
+				"selectedIconPath": "static/imgs/tabbar/tab_service_01.png",
+				"text": "服务",
+				"pagePath": "pages/tabbar/service/service"
+			}
+		]
 	}
 }
