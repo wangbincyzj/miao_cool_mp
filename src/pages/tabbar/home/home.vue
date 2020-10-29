@@ -1,17 +1,21 @@
 <template>
-  <view>
-    <Header :bg-color="bgColor">
+  <Page :header-color="bgColor" is-body-topping>
+    <template #header>
       <text v-if="lastFlag">喵酷科技</text>
-    </Header>
+    </template>
 
-    <HomeTop/>
+    <template #default>
 
-    <HomeProduct/>
+      <HomeTop/>
 
-    <HomeCount/>
+      <HomeProduct/>
 
-    <HomeDemo/>
-  </view>
+      <HomeCount/>
+
+      <HomeDemo/>
+
+    </template>
+  </Page>
 </template>
 
 <script>
@@ -20,9 +24,10 @@ import HomeTop from "@/pages/tabbar/home/home-top";
 import HomeCount from "@/pages/tabbar/home/home-count";
 import HomeDemo from "@/pages/tabbar/home/home-demo";
 import Header from "@/components/header/Header";
+import Page from "@/components/page/Page";
 
 export default {
-  components: {Header, HomeDemo, HomeCount, HomeTop, HomeProduct},
+  components: {Page, Header, HomeDemo, HomeCount, HomeTop, HomeProduct},
   data() {
     return {
       lastFlag: false,
@@ -45,8 +50,9 @@ export default {
           this.bgColor = "transparent"
         }
       }
-
-    }
+    },
+  },
+  mounted() {
   }
 }
 </script>

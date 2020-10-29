@@ -1,20 +1,34 @@
 <script>
+import store  from "./store"
 	export default {
-		onLaunch: function() {
-			console.log('App Launch')
-      this.$store.state.system.menuRect = uni.getMenuButtonBoundingClientRect()
-		},
+    onLaunch: function () {
+      this.init()
+    },
 		onShow: function() {
 			console.log('App Show')
 		},
 		onHide: function() {
 			console.log('App Hide')
-		}
+		},
+
+    methods:{
+      init() {
+        Object.keys(startUp).forEach(func => startUp[func].call())
+      },
+    }
 	}
+
+	// 启动时候需要执行的方法
+	const startUp = {
+    getMenuRect() {
+      store.state.system.menuRect = uni.getMenuButtonBoundingClientRect()
+    }
+  }
+
+
 </script>
 
 <style lang="scss">
   @import "~uview-ui/index.scss";
   @import "/src/static/css/main.scss";
-	/*每个页面公共css */
 </style>

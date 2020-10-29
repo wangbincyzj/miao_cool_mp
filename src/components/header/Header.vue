@@ -8,13 +8,13 @@
 
 <script>
 import {jsUtils} from "@/utils/jsUtils";
+import {baseConfig} from "@/config/baseConfig";
 
 export default {
   name: "Header",
   props:{
     bgColor:{
       type: String,
-      default: "transparent"
     },
     bottom:{
       type: Number,
@@ -31,14 +31,11 @@ export default {
         height: rect.bottom + this.bottom + "px",
         "background-color": this.bgColor,
         "padding-top": rect.top + "px",
-        "padding-bottom": this.bottom + "px"
+        "padding-bottom": baseConfig.headerBottomHeight + "px"
       })
 
     }
-  },
-  created() {
-    console.log(this.$store.state.system.menuRect)
-  },
+  }
 }
 </script>
 

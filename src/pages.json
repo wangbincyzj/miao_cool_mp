@@ -11,7 +11,10 @@
 		},
 		{
 			"path": "pages/tabbar/business/business",
-			"style": {}
+			"style": {
+        "navigationBarTitleText": "在线客服",
+        "navigationStyle":"custom"
+      }
 		},
 		{
 			"path": "pages/tabbar/demo/demo",
@@ -19,7 +22,10 @@
 		},
 		{
 			"path": "pages/tabbar/service/service",
-			"style": {}
+      "style": {
+        "navigationBarTitleText": "服务",
+        "navigationStyle":"custom"
+      }
 		}
 	    ,{
             "path" : "pages/demo/detail/detail",
